@@ -5,11 +5,12 @@ import React, {
   useCallback,
 } from "react"
 import { snakeReducer, initial } from "./reducer"
-import { actRefreshModel, actStartGame } from "./actions"
+import { actRefreshModel, actStartGame, actChangeDirection } from "./actions"
 import { GameplayState } from "./types"
 import { dispatchDirectionChangesOnKeypress } from "./functions"
 import { SnakePathSvgRenderer } from "./SnakePathSvgRenderer"
 import styles from "./SnakeGame.module.scss"
+import { DirectionPad } from "./DirectionPad"
 
 export const SnakeGame: FunctionComponent<{}> = () => {
   const [state, dispatch] = useReducer(snakeReducer, initial)
@@ -39,6 +40,10 @@ export const SnakeGame: FunctionComponent<{}> = () => {
     cancelAnimationFrame(animationRequestId)
   }, [state.gameplayState])
 
+  const changeDirection = useCallback(direction => {
+    dispatch(actChangeDirection(direction))
+  }, [])
+
   const { gameplayState, score, points, foodPoint } = state
   return (
     <div className={styles.snakeContain}>
@@ -54,6 +59,7 @@ export const SnakeGame: FunctionComponent<{}> = () => {
       <div className={styles.game}>
         <SnakePathSvgRenderer points={points} foodPoint={foodPoint} />
       </div>
+      <DirectionPad changeDirection={changeDirection} />
     </div>
   )
 }

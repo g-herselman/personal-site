@@ -1,13 +1,14 @@
 .snakeContain {
   display: grid;
-  grid-template-rows: 500px;
-  grid-template-columns: 500px;
+  width: 500px;
+  grid-template-rows: 70% 30%;
+  grid-template-columns: 70% 30%;
   flex-direction: column;
 }
 
 .menu {
-  grid-row: 1;
-  grid-column: 1;
+  grid-row: 1/3;
+  grid-column: 1/3;
   background-color: #ffffffbb;
   z-index: 2;
   display: flex;
@@ -18,6 +19,6 @@
 
 .game {
   z-index: 1;
-  grid-row: 1;
-  grid-column: 1;
+  grid-row: 1/3;
+  grid-column: 1/3;
 }
