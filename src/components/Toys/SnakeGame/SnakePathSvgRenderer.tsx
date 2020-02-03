@@ -33,7 +33,7 @@ export const SnakePathSvgRenderer: FunctionComponent<{
           fill="none"
         />
         <path
-          d={mainPathDrawString}
+          d={shadowPathDrawString}
           style={{
             fill: "none",
             stroke: "rgb(0, 80, 136)",
@@ -43,7 +43,7 @@ export const SnakePathSvgRenderer: FunctionComponent<{
           }}
         />
         <path
-          d={shadowPathDrawString}
+          d={mainPathDrawString}
           style={{
             fill: "none",
             stroke: "rgb(0, 80, 136)",

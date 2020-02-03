@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react"
-import styles from "./CvContents.module.scss"
+import styles from "./Cv.module.scss"
 
-export const CvContents: FunctionComponent<{}> = () => {
+export const Cv: FunctionComponent<{}> = () => {
   const [expandedSections, setExpandedSections] = useState<string[]>([])
 
   const hasSection = (section: string) => expandedSections.includes(section)
@@ -119,14 +119,12 @@ export const CvContents: FunctionComponent<{}> = () => {
       <div className={styles.education}>
         <h1>Education</h1>
 
-        <h3 className={styles.nobottom}>2017</h3>
-        <h4 className={styles.notop}>
+        <h3>2017</h3>
+        <h4>
           Bachelor of Science in Computing, <i>cum laude</i> <br /> UNISA{" "}
         </h4>
-        <h3 className={styles.nobottom}>2013</h3>
-        <h4 className={styles.notop}>
-          Microsoft Certified Solutions Associate, Windows Server 2008
-        </h4>
+        <h3>2013</h3>
+        <h4>Microsoft Certified Solutions Associate, Windows Server 2008</h4>
       </div>
     </>
   )

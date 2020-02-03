@@ -161,7 +161,7 @@ export const getHasCollision = (points: SnakePoint[]): boolean => {
   const [previousHeadPoint, headPoint] = points.slice(-2)
 
   const outOfBounds = headPoint.some(
-    dimension => dimension > 100 || dimension < 0
+    dimension => dimension > playFieldSize || dimension < 0
   )
 
   if (outOfBounds) return true

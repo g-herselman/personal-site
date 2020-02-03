@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react"
 import { SitePage } from "../components/SitePage"
-import { CvContents } from "../components/CvContents"
-import { AboutMe } from "../components/AboutMe"
+import { Cv } from "../components/Copy/Cv"
+import { AboutMe } from "../components/Copy/AboutMe"
 
 export const CvPage: FunctionComponent<{}> = () => {
   return (
     <SitePage>
       <AboutMe />
-      <CvContents />
+      <Cv />
     </SitePage>
   )
 }

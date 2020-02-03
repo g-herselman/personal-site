@@ -8,7 +8,7 @@ import {
   getRandomFoodPoint,
   getWillEat,
 } from "./functions"
-import { lengthToAddWhenEat } from "./constants"
+import { lengthToAddWhenEat, playFieldSize } from "./constants"
 
 export type SnakeState = {
   gameplayState: GameplayState
@@ -21,8 +21,8 @@ export type SnakeState = {
 }
 
 const initialPoints: SnakePoint[] = [
-  [0, 50],
-  [20, 50],
+  [0, playFieldSize / 2],
+  [lengthToAddWhenEat * 2, playFieldSize / 2],
 ]
 
 export const initial: SnakeState = {

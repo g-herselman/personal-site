@@ -1,13 +1,14 @@
 import React, { FunctionComponent } from "react"
 import { SitePage } from "../../components/SitePage"
-import { SnakeGame } from "../../components/Snake"
+import { SnakeGame } from "../../components/Toys/SnakeGame"
+import { ToyboxLinks } from "../../components/Atoms/ToyboxLinks"
 
-export const ToyBoxpage: FunctionComponent<{}> = () => {
+export const Snake: FunctionComponent<{}> = () => {
   return (
-    <SitePage>
+    <SitePage sublinks={<ToyboxLinks />}>
       <SnakeGame />
     </SitePage>
   )
 }
 
-export default ToyBoxpage
+export default Snake

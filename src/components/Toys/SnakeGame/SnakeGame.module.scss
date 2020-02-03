@@ -1,0 +1,23 @@
+.snakeContain {
+  display: grid;
+  grid-template-rows: 500px;
+  grid-template-columns: 500px;
+  flex-direction: column;
+}
+
+.menu {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: #ffffffbb;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+}

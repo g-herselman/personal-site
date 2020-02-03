@@ -4,11 +4,12 @@ import React, {
   useEffect,
   useCallback,
 } from "react"
-import { SnakeRenderer } from "./SnakeRenderer"
 import { snakeReducer, initial } from "./reducer"
 import { actRefreshModel, actStartGame } from "./actions"
 import { GameplayState } from "./types"
 import { dispatchDirectionChangesOnKeypress } from "./functions"
+import { SnakePathSvgRenderer } from "./SnakePathSvgRenderer"
+import styles from "./SnakeGame.module.scss"
 
 export const SnakeGame: FunctionComponent<{}> = () => {
   const [state, dispatch] = useReducer(snakeReducer, initial)
@@ -38,7 +39,21 @@ export const SnakeGame: FunctionComponent<{}> = () => {
     cancelAnimationFrame(animationRequestId)
   }, [state.gameplayState])
 
-  const startNewGame = useCallback(() => dispatch(actStartGame()), [])
-
-  return <SnakeRenderer state={state} startNewGame={startNewGame} />
+  const { gameplayState, score, points, foodPoint } = state
+  return (
+    <div className={styles.snakeContain}>
+      {gameplayState === GameplayState.GAME_OVER && (
+        <div className={styles.menu}>
+          <h1>GAME OVER</h1>
+          <h3>Score: {score}</h3>
+          <div onClick={() => dispatch(actStartGame())}>
+            <h3>Start Again</h3>
+          </div>
+        </div>
+      )}
+      <div className={styles.game}>
+        <SnakePathSvgRenderer points={points} foodPoint={foodPoint} />
+      </div>
+    </div>
+  )
 }

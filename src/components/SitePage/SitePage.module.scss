@@ -50,13 +50,14 @@ $btn-margin-size: 0.2em;
     color: $rootblue;
     border: $btn-border-size solid $invisiblue;
     text-decoration: initial;
+    text-transform: uppercase;
     transition: border-color 20ms;
     &:first-of-type {
       margin: 0 $btn-margin-size 0 (-$btn-margin-size);
     }
   }
   .active {
-    border: $btn-border-size solid $rootblue;
+    border: $btn-border-size solid $semiblue;
   }
 }
 
@@ -64,6 +65,7 @@ $btn-margin-size: 0.2em;
   position: relative;
   left: -3.3em;
   svg {
+    display: inline-block;
     height: 3.3em;
     margin-right: -0.4em;
   }
@@ -80,8 +82,4 @@ $btn-margin-size: 0.2em;
 
 .header {
   padding-bottom: 2em;
-}
-
-.slashes {
-  display: inline-block;
 }
