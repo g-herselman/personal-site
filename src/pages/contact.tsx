@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react"
-import { SitePage } from "../components/SitePage"
+import { SitePage } from "../components/Layout/SitePage"
 import { LinksAndContacts } from "../components/Copy/LinksAndContacts"
 
 export const ContactPage: FunctionComponent<{}> = () => {

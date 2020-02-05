@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react"
-import { SitePage, CascadeLink } from "../../components/SitePage"
+import { SitePage, CascadeLink } from "../../components/Layout/SitePage"
 
 export const ToyBoxPage: FunctionComponent<{}> = () => {
   return (

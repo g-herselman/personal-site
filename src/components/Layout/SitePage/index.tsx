@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode } from "react"
 import { Link } from "gatsby"
 import styles from "./SitePage.module.scss"
-import { Slashes } from "../Atoms/Slashes"
+import { Slashes } from "../../Atoms/Slashes"
 import Helmet from "react-helmet"
 
 export const CascadeLink = props => {

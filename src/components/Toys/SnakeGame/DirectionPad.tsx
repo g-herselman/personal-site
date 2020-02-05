@@ -5,7 +5,12 @@ import { Direction } from "./types"
 export const DirectionPad: FunctionComponent<{
   changeDirection: (direction: Direction) => void
 }> = ({ changeDirection }) => {
-  if ((navigator?.maxTouchPoints ?? 0) < 1) return <></>
+  if (
+    typeof navigator === "undefined" ||
+    typeof navigator.maxTouchPoints !== "number" ||
+    navigator.maxTouchPoints < 1
+  )
+    return <></>
 
   const Circle = ({ direction }) => (
     <svg width="100%" viewBox="0 0 4 4">
@@ -14,7 +19,7 @@ export const DirectionPad: FunctionComponent<{
         r="2"
         cx="2"
         cy="2"
-        onClick={() => changeDirection(direction)}
+        onMouseDown={() => changeDirection(direction)}
       />
     </svg>
   )

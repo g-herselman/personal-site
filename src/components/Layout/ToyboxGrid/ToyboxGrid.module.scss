@@ -1,0 +1,21 @@
+.toyboxGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 2em;
+
+  p {
+    margin-left: 0em;
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .toyboxGrid {
+    grid-template-columns: 100%;
+    gap: 0em;
+
+    p {
+      margin-left: 1em;
+    }
+  }
+}

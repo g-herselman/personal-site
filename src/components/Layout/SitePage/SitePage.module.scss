@@ -80,6 +80,26 @@ $btn-margin-size: 0.2em;
   }
 }
 
+@media screen and (max-width: 1150px) {
+  .logo {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    svg {
+      display: inline-block;
+      height: 1em;
+      margin-right: 0em;
+    }
+    h1 {
+      font-size: 1.3em;
+      font-weight: 800;
+    }
+  }
+}
+
 .header {
   padding-bottom: 2em;
 }
