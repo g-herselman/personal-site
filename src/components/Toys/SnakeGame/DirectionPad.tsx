@@ -13,7 +13,7 @@ export const DirectionPad: FunctionComponent<{
     return <></>
 
   const Circle = ({ direction }) => (
-    <svg width="100%" viewBox="0 0 4 4">
+    <svg width="115%" viewBox="0 0 4 4">
       <circle
         fill="#00000022"
         r="2"
