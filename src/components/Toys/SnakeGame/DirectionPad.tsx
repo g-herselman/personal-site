@@ -19,7 +19,7 @@ export const DirectionPad: FunctionComponent<{
         r="2"
         cx="2"
         cy="2"
-        onMouseDown={() => changeDirection(direction)}
+        onTouchStart={() => changeDirection(direction)}
       />
     </svg>
   )
