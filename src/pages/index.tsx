@@ -1,12 +1,11 @@
-import React, { FunctionComponent } from "react"
-import { SitePage } from "../components/Layout/SitePage"
+import React, { useEffect, FunctionComponent } from "react"
+import { navigate } from "gatsby"
 
 const IndexPage: FunctionComponent<{}> = () => {
-  return (
-    <>
-      <SitePage />
-    </>
-  )
+  useEffect(() => {
+    navigate("/cv")
+  })
+  return <></>
 }
 
 export default IndexPage

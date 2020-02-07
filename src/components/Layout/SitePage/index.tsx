@@ -29,7 +29,7 @@ export const SitePage: FunctionComponent<{ sublinks?: ReactNode }> = ({
         </div>
         <div className={styles.linkRow}>
           <CascadeLink to={"/cv"}>CV</CascadeLink>
-          <CascadeLink to={"/contact"}>Contact</CascadeLink>
+          {/* <CascadeLink to={"/contact"}>Contact</CascadeLink> */}
           <CascadeLink to={"/toybox"}>Toybox</CascadeLink>
         </div>
         {sublinks && <div className={styles.linkRow}>{sublinks}</div>}
