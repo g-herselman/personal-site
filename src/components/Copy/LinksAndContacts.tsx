@@ -1,5 +1,5 @@
 import React from "react"
 
 export const LinksAndContacts = () => {
-  return <div>Links and Contacts</div>
+  return <section>Links and Contacts</section>
 }

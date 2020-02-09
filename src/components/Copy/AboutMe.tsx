@@ -2,8 +2,8 @@ import React, { FunctionComponent } from "react"
 
 export const AboutMe: FunctionComponent<{}> = () => {
   return (
-    <>
-      <h1>About Me</h1>
+    <section>
+      <h2>About Me</h2>
       <p>
         I've worked with computer code and infrastructure professionally for
         more than a decade.
@@ -28,6 +28,6 @@ export const AboutMe: FunctionComponent<{}> = () => {
         I'm passionate about technology and how it can be used to make people's
         lives better.
       </p>
-    </>
+    </section>
   )
 }

@@ -1,0 +1,120 @@
+@import "../styles/variables.scss";
+
+// --------------------------- Font-scaling Algorithm ----------------------------
+// For the general strategy: https://www.codementor.io/ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g
+// Explanation contained herein: https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+
+// -------------
+// Min and max viewport sizes to apply the font scaling
+$min_width: 360;
+$max_width: 1400;
+// --------------
+
+// --------------
+// Range of font size to apply
+$min_font: 13;
+$max_font: 18;
+// --------------
+
+html {
+  font-size: #{$min_font}px;
+}
+
+// --------------
+// Media queries
+// -------------
+
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  html {
+    font-size: calc(
+      #{$min_font}px + (#{$max_font} - #{$min_font}) *
+        ((100vw - #{$min_width}px) / (#{$max_width} - #{$min_width}))
+    );
+  }
+}
+
+@media (min-width: #{$max_width}px) {
+  html {
+    font-size: #{$max_font}px;
+  }
+}
+
+// --------------------------- ----------------------------------------------------
+
+body {
+  padding: 0 1rem;
+}
+
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Poppins";
+  font-weight: 800;
+  color: $rootblue;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.65rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+h5 {
+  font-size: 1.15rem;
+}
+body {
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+ul li {
+  padding-left: 22px;
+  text-indent: -22px;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.stack {
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: grid;
+  left: 6em;
+  color: $textcolour;
+
+  font-family: "Fira Sans";
+}

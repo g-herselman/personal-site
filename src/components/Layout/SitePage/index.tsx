@@ -1,40 +1,21 @@
 import React, { FunctionComponent, ReactNode } from "react"
-import { Link } from "gatsby"
+import "../../../styles/main.scss"
 import styles from "./SitePage.module.scss"
 import { Slashes } from "../../Atoms/Slashes"
+import { Header } from "./header"
 import Helmet from "react-helmet"
-
-export const CascadeLink = props => {
-  const className =
-    typeof window !== "undefined" &&
-    window.location.pathname.startsWith(props.to)
-      ? styles.active
-      : ""
-  return <Link className={className} {...props} />
-}
 
 export const SitePage: FunctionComponent<{ sublinks?: ReactNode }> = ({
   children = null,
   sublinks,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Helmet>
         <title>G.Herselman</title>
       </Helmet>
-      <div className={styles.header}>
-        <div className={styles.logo}>
-          <Slashes />
-          <h1>G.Herselman</h1>
-        </div>
-        <div className={styles.linkRow}>
-          <CascadeLink to={"/cv"}>CV</CascadeLink>
-          {/* <CascadeLink to={"/contact"}>Contact</CascadeLink> */}
-          <CascadeLink to={"/toybox"}>Toybox</CascadeLink>
-        </div>
-        {sublinks && <div className={styles.linkRow}>{sublinks}</div>}
-      </div>
-      <div className="page-contents">{children}</div>
+      <Header sublinks={sublinks} />
+      {children}
     </div>
   )
 }
