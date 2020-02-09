@@ -3,64 +3,6 @@
 $btn-border-size: 0.2em;
 $btn-margin-size: 0.2em;
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  left: 6em;
-  color: $textcolour;
-
-  font-family: "Fira Sans";
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Poppins";
-    font-weight: 800;
-    color: $rootblue;
-  }
-  h5 {
-    font-size: 1em;
-    font-weight: 500;
-  }
-
-  li {
-    padding-block-end: 1.2em;
-    margin-left: 1.5em;
-  }
-
-  p {
-    margin-left: 1em;
-  }
-}
-
-.linkRow {
-  font-family: "Poppins";
-  font-weight: 800;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-
-  a {
-    margin: 0 $btn-margin-size;
-    padding: 0 0.6em;
-    color: $rootblue;
-    border: $btn-border-size solid $invisiblue;
-    text-decoration: initial;
-    text-transform: uppercase;
-    transition: border-color 20ms;
-    &:first-of-type {
-      margin: 0 $btn-margin-size 0 (-$btn-margin-size);
-    }
-  }
-  .active {
-    border: $btn-border-size solid $semiblue;
-  }
-}
-
 .logo {
   position: relative;
   left: -3.3em;
@@ -100,6 +42,26 @@ $btn-margin-size: 0.2em;
   }
 }
 
-.header {
-  padding-bottom: 2em;
+.linkRow {
+  font-family: "Poppins";
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  a {
+    margin: 0 $btn-margin-size;
+    padding: 0 0.6em;
+    color: $rootblue;
+    border: $btn-border-size solid $invisiblue;
+    text-decoration: initial;
+    text-transform: uppercase;
+    transition: border-color 20ms;
+    &:first-of-type {
+      margin: 0 $btn-margin-size 0 (-$btn-margin-size);
+    }
+  }
+  .active {
+    border: $btn-border-size solid $semiblue;
+  }
 }

@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useState } from "react"
-import styles from "./Cv.module.scss"
 
 export const Cv: FunctionComponent<{}> = () => {
   const [expandedSections, setExpandedSections] = useState<string[]>([])
@@ -16,7 +15,7 @@ export const Cv: FunctionComponent<{}> = () => {
   }
 
   return (
-    <>
+    <section>
       <h1>Experience</h1>
       <h3>
         NML (2018 - Current)
@@ -116,16 +115,6 @@ export const Cv: FunctionComponent<{}> = () => {
           </p>
         </>
       )}
-      <div className={styles.education}>
-        <h1>Education</h1>
-
-        <h3>2017</h3>
-        <h4>
-          Bachelor of Science in Computing, <i>cum laude</i> <br /> UNISA{" "}
-        </h4>
-        <h3>2013</h3>
-        <h4>Microsoft Certified Solutions Associate, Windows Server 2008</h4>
-      </div>
-    </>
+    </section>
   )
 }
